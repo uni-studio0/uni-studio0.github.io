@@ -32,7 +32,7 @@ Uni Studio makes cozy, candy-bright casual puzzle games for mobile. Its first ga
 
 - Games: Kitten Pop: Cat Match Puzzle, Android, Google Play id `com.UniStudio.KittenPop`, Puzzle / Casual, offline play, ads and in-app purchases.
 - Kitten Pop facts usable on the site: hundreds of levels across candy lands; 15 collectible cat breeds (Calico, Ginger, Tuxedo, Siamese, Snow, Lilac, Golden, Gummy, Cupcake, Donut and more); outfits and hats; boosters Color Bomb, Lollipop, Undo; rainbow cats; daily gifts and spin wheel; chocolate and ice obstacles.
-- Kitten Pop's existing privacy policy lives at `marwan0.github.io/kittenpop/privacy.html` (linked from Play). Data-safety form also cites `marwan0.github.io/kittenpop/delete.html`, which does not exist yet.
+- Kitten Pop's existing privacy policy lives at `marwan0.github.io/kittenpop/privacy.html` (linked from Play). Data-safety form cites `marwan0.github.io/kittenpop/delete.html`. Privacy and delete pages exist in both repos (Marwan0.github.io and this one); keep them in sync.
 - Adding a game must be a copy-one-block edit.
 - Undecided: whether the Play "developer website" moves to the new domain (then app-ads.txt must be copied to its root).
 
