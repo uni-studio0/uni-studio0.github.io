@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Uni Studio · Cozy puzzle games</title>
+<meta name="description" content="Uni Studio makes short, sweet puzzle games for your phone. Play Kitten Pop on Google Play.">
+<meta name="theme-color" content="#ffe6f2">
+<meta property="og:title" content="Uni Studio · Cozy puzzle games">
+<meta property="og:description" content="Short, sweet puzzle games for your phone. Meet Kitten Pop.">
+<meta property="og:image" content="https://uni-studio0.github.io/assets/kittenpop/feature.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/favicon.png">
+<link rel="preload" href="fonts/Fredoka.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face { font-family: Fredoka; src: url(fonts/Fredoka.woff2) format("woff2"); font-weight: 300 700; font-display: swap; }
+@font-face { font-family: Nunito; src: url(fonts/Nunito.woff2) format("woff2"); font-weight: 200 1000; font-display: swap; }
+:root {
+  --bg: #ffe6f2; --bg-2: #fff4fa; --panel: #fff; --line: #f3c6dd;
+  --plum: #2b0d4f; --plum-2: #5b3a85;
+  --pink: #e8338a; --pink-deep: #c2186f; --violet: #8d4be0; --mint: #22bfa6; --sun: #ffc22e;
+  --shadow: 0 18px 40px -24px rgb(43 13 79 / .35);
+  --ease: cubic-bezier(.16, 1, .3, 1);
+  color-scheme: light;
+}
+* { box-sizing: border-box; margin: 0; }
+html { scrollbar-color: var(--pink) var(--bg); scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--plum); font: 400 18px/1.6 Nunito, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+::selection { background: var(--pink); color: #fff; }
+a { color: inherit; text-underline-offset: .2em; text-decoration-thickness: 2px; text-decoration-color: var(--pink); }
+:focus-visible { outline: 3px solid var(--pink); outline-offset: 3px; border-radius: 12px; }
+img { display: block; max-width: 100%; height: auto; }
+.wrap { width: min(100% - 32px, 1200px); margin-inline: auto; }
+h1, h2, h3, .btn, nav, .brand { font-family: Fredoka, Nunito, sans-serif; }
+
+/* Header */
+header { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 20px 0; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 26px; line-height: 1; text-decoration: none; }
+.brand svg { width: 44px; height: auto; }
+.brand b { color: var(--pink); font-weight: 600; }
+nav { display: flex; gap: 8px; font-weight: 500; font-size: 18px; }
+nav a { text-decoration: none; padding: 10px 18px; border-radius: 999px; background: var(--panel); transition: background .2s, color .2s; }
+nav a:hover { background: var(--plum); color: #fff; }
+
+/* Buttons */
+.btn { display: inline-flex; align-items: center; gap: 12px; padding: 17px 30px; border-radius: 999px; font-weight: 600; font-size: 20px; line-height: 1; text-decoration: none;
+  background: var(--plum); color: #fff; box-shadow: 0 12px 26px -10px rgb(43 13 79 / .55); transition: translate .25s var(--ease), box-shadow .25s var(--ease), background .2s; }
+.btn:hover { translate: 0 -2px; box-shadow: 0 18px 30px -12px rgb(43 13 79 / .6); background: #3b1566; }
+.btn:active { translate: 0 1px; box-shadow: 0 6px 14px -8px rgb(43 13 79 / .6); }
+.btn svg { width: 22px; height: 22px; flex: none; color: var(--sun); }
+.btn small { display: block; font: 500 13px/1 Nunito, sans-serif; opacity: .8; margin-bottom: 4px; }
+.btn.soft { background: var(--panel); color: var(--plum); box-shadow: var(--shadow); }
+.btn.soft svg { color: var(--pink); }
+
+/* Hero */
+.hero { text-align: center; padding: 56px 0 0; }
+h1 { font-weight: 600; font-size: clamp(46px, 6.4vw, 92px); line-height: 1; letter-spacing: -0.025em; text-wrap: balance; max-width: 13ch; margin-inline: auto; }
+h1 span { color: var(--pink); }
+.lede { color: var(--plum-2); font-size: clamp(18px, 1.6vw, 22px); margin: 22px auto 34px; max-width: 40ch; text-wrap: pretty; }
+
+/* Screenshot fan: the page's one authored motion */
+.fan { --w: clamp(150px, 16vw, 236px); display: flex; justify-content: center; margin-top: 56px; height: calc(var(--w) * 1.82); overflow: hidden; padding-top: 24px; }
+.fan a { flex: none; width: var(--w); margin: 0 calc(var(--w) * -0.08); border-radius: calc(var(--w) * .11); overflow: hidden; box-shadow: 0 24px 50px -18px rgb(43 13 79 / .45);
+  rotate: var(--r); translate: 0 var(--y); transform-origin: 50% 120%; transition: rotate .45s var(--ease), translate .45s var(--ease), scale .45s var(--ease); }
+.fan a:nth-child(1) { --r: -9deg; --y: 60px; --i: -2; }
+.fan a:nth-child(2) { --r: -3deg; --y: 14px; --i: -1; z-index: 1; }
+.fan a:nth-child(3) { --r: 0deg; --y: 0px; --i: 0; z-index: 2; }
+.fan a:nth-child(4) { --r: 4deg; --y: 14px; --i: 1; z-index: 1; }
+.fan a:nth-child(5) { --r: 9deg; --y: 60px; --i: 2; }
+.fan a:hover, .fan a:focus-visible { rotate: 0deg; translate: 0 calc(var(--y) - 22px); scale: 1.04; z-index: 3; }
+@media (prefers-reduced-motion: no-preference) {
+  .fan a { animation: deal 1.1s var(--ease) backwards; animation-delay: calc(.25s + (2 - var(--i) * var(--i)) * -40ms); }
+  @keyframes deal { from { rotate: 0deg; translate: calc(var(--i) * var(--w) * -0.84) 70px; } }
+}
+
+/* Games */
+.band { background: var(--bg-2); padding: 96px 0; }
+h2 { font-weight: 600; font-size: clamp(34px, 3.6vw, 46px); line-height: 1.1; letter-spacing: -0.015em; margin-bottom: 32px; }
+.game { display: grid; grid-template-columns: auto 1fr auto; gap: 32px; align-items: center; background: var(--panel); border-radius: 32px; padding: 32px; box-shadow: var(--shadow); }
+.game > img { width: 140px; height: 140px; border-radius: 32px; }
+h3 { font-weight: 600; font-size: 36px; line-height: 1.1; }
+.game p { color: var(--plum-2); margin-top: 8px; max-width: 56ch; }
+.tags { display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap; padding: 0; list-style: none; }
+.tags li { font: 500 15px Fredoka, sans-serif; padding: 6px 14px; border-radius: 999px; background: var(--bg); }
+.game-links { display: grid; gap: 12px; justify-items: end; }
+.game-links .small { font-size: 15px; color: var(--plum-2); }
+.soon { margin-top: 20px; border: 2px dashed var(--line); border-radius: 32px; padding: 28px; text-align: center; color: var(--plum-2); font: 500 20px Fredoka, sans-serif; }
+
+/* About + contact */
+.about { padding: 96px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 24px 48px; align-items: start; }
+.about p { font-size: 20px; color: var(--plum-2); max-width: 46ch; }
+.about p + p { margin-top: 16px; }
+.contact { background: var(--plum); color: #fff; border-radius: 40px; padding: 56px; display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+.contact h2 { margin: 0; }
+.contact p { color: #dccbf3; margin-top: 8px; }
+footer { padding: 40px 0 48px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; color: var(--plum-2); font-size: 16px; }
+
+@media (max-width: 860px) {
+  .game { grid-template-columns: auto 1fr; padding: 24px; gap: 20px 24px; }
+  .game > img { width: 96px; height: 96px; border-radius: 24px; }
+  .game-links { grid-column: 1 / -1; justify-items: start; }
+  .about { grid-template-columns: 1fr; padding: 72px 0; }
+  .band { padding: 72px 0; }
+  .contact { padding: 36px 28px; border-radius: 32px; }
+}
+@media (max-width: 600px) {
+  header { flex-direction: column; gap: 14px; padding-top: 16px; }
+  nav a { padding: 9px 16px; font-size: 17px; }
+  .hero { padding-top: 32px; }
+  .fan { --w: 40vw; margin-top: 40px; }
+  .fan a:nth-child(1), .fan a:nth-child(5) { display: none; }
+  .fan a:nth-child(2) { --r: -6deg; --y: 30px; }
+  .fan a:nth-child(4) { --r: 6deg; --y: 30px; }
+  .game { grid-template-columns: 1fr; }
+  h3 { font-size: 30px; }
+  .btn { padding: 16px 24px; font-size: 18px; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="brand" href="./" aria-label="Uni Studio home">
+    <svg viewBox="0 0 42 28" aria-hidden="true"><rect width="12" height="12" rx="4" fill="#ff5aa8"/><rect x="15" width="12" height="12" rx="4" fill="#a463f2"/><rect x="30" width="12" height="12" rx="4" fill="#3fd9c2"/><rect y="15" width="12" height="12" rx="4" fill="#ffcc3d"/><rect x="30" y="15" width="12" height="12" rx="4" fill="#a463f2"/><path d="m21 14.2 2 4.1 4.5.6-3.3 3.1.8 4.5-4-2.2-4 2.2.8-4.5-3.3-3.1 4.5-.6z" fill="#ff5aa8" stroke="#ff5aa8" stroke-width="1.6" stroke-linejoin="round"/></svg>
+    <span><b>Uni</b> Studio</span>
+  </a>
+  <nav aria-label="Main"><a href="#games">Games</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+</header>
+
+<main>
+<section class="hero">
+  <h1>Cozy puzzle games, <span>candy-bright.</span></h1>
+  <p class="lede">Uni Studio makes short, sweet puzzle games for your phone. Meet our first: Kitten Pop.</p>
+  <a class="btn" href="https://play.google.com/store/apps/details?id=com.UniStudio.KittenPop"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 2.8v18.4c0 .8.9 1.3 1.6.9l15.2-9.2a1 1 0 0 0 0-1.8L6.6 1.9C5.9 1.5 5 2 5 2.8z"/></svg>Get Kitten Pop on Google Play</a>
+  <div class="fan" aria-label="Kitten Pop screenshots">
+    <a href="https://play.google.com/store/apps/details?id=com.UniStudio.KittenPop" tabindex="-1"><img src="assets/kittenpop/shot4.webp" width="540" height="960" alt="Dress up your kitty in hats and outfits"></a>
+    <a href="https://play.google.com/store/apps/details?id=com.UniStudio.KittenPop" tabindex="-1"><img src="assets/kittenpop/shot2.webp" width="540" height="960" alt="Hundreds of sweet levels on the candy map"></a>
+    <a href="https://play.google.com/store/apps/details?id=com.UniStudio.KittenPop" tabindex="-1"><img src="assets/kittenpop/shot1.webp" width="540" height="960" alt="Spin the rings, match and pop kittens"></a>
+    <a href="https://play.google.com/store/apps/details?id=com.UniStudio.KittenPop" tabindex="-1"><img src="assets/kittenpop/shot3.webp" width="540" height="960" alt="Collect 15 cute cats in the Cattery"></a>
+    <a href="https://play.google.com/store/apps/details?id=com.UniStudio.KittenPop" tabindex="-1"><img src="assets/kittenpop/shot5.webp" width="540" height="960" alt="Melt ice and munch chocolate"></a>
+  </div>
+</section>
+</main>
+</div>
+
+<section class="band" id="games"><div class="wrap">
+  <h2>Our games</h2>
+  <article class="game">
+    <img src="assets/kittenpop/icon.webp" width="256" height="256" alt="Kitten Pop app icon">
+    <div>
+      <h3>Kitten Pop</h3>
+      <p>Spin the candy rings, line up same-color kittens on a spoke and pop them. Hundreds of levels, 15 cats to collect and dress up, and boosters like the Color Bomb and Lollipop.</p>
+      <ul class="tags"><li>Puzzle</li><li>Android</li><li>Plays offline</li></ul>
+    </div>
+    <div class="game-links">
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.UniStudio.KittenPop"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 2.8v18.4c0 .8.9 1.3 1.6.9l15.2-9.2a1 1 0 0 0 0-1.8L6.6 1.9C5.9 1.5 5 2 5 2.8z"/></svg>Google Play</a>
+      <a class="small" href="kittenpop/privacy.html">Privacy policy</a>
+    </div>
+  </article>
+  <p class="soon">More games are on the way.</p>
+</div></section>
+
+<div class="wrap">
+<section class="about" id="about">
+  <h2>About Uni Studio</h2>
+  <div>
+    <p>We're an independent studio making casual games you can pick up for five minutes and put down smiling.</p>
+    <p>Bright colors, cute characters, and puzzles with a real twist. Short levels, no rush.</p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div>
+    <h2>Say hi</h2>
+    <p>Feedback, bugs, ideas, press: we read everything.</p>
+  </div>
+  <a class="btn soft" href="mailto:game.studio.m@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg>game.studio.m@gmail.com</a>
+</section>
+
+<footer>
+  <span>© 2026 Uni Studio</span>
+  <a href="kittenpop/privacy.html">Kitten Pop privacy policy</a>
+</footer>
+</div>
+</body>
+</html>
