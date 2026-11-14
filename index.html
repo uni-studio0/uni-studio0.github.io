@@ -84,6 +84,13 @@ h3 { font-weight: 600; font-size: 36px; line-height: 1.1; }
 .tags li { font: 500 15px Fredoka, sans-serif; padding: 6px 14px; border-radius: 999px; background: var(--bg); }
 .game-links { display: grid; gap: 12px; justify-items: end; }
 .game-links .small { font-size: 15px; color: var(--plum-2); }
+.game + .game { margin-top: 20px; }
+.badge { display: inline-block; vertical-align: middle; margin-left: 10px; font: 600 15px/1 Fredoka, sans-serif; padding: 7px 14px; border-radius: 999px; background: var(--sun); color: var(--plum); }
+.trailer { grid-column: 1 / -1; position: relative; display: grid; place-items: center; border-radius: 24px; overflow: hidden; background: var(--plum); }
+.trailer img { grid-area: 1 / 1; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+.trailer .play { grid-area: 1 / 1; width: 84px; height: 84px; border-radius: 50%; display: grid; place-items: center; background: var(--pink); color: #fff; box-shadow: 0 12px 30px -8px rgb(0 0 0 / .5); transition: scale .25s var(--ease); }
+.trailer .play svg { width: 40px; height: 40px; }
+.trailer:hover .play { scale: 1.08; }
 .soon { margin-top: 20px; border: 2px dashed var(--line); border-radius: 32px; padding: 28px; text-align: center; color: var(--plum-2); font: 500 20px Fredoka, sans-serif; }
 
 /* About + contact */
@@ -157,6 +164,19 @@ footer { padding: 40px 0 48px; display: flex; justify-content: space-between; ga
       <a class="small" href="kittenpop/privacy.html">Privacy policy</a>
     </div>
   </article>
+  <article class="game">
+    <img src="assets/arroworbit/icon.webp" width="256" height="256" alt="Arrow Orbit app icon">
+    <div>
+      <h3>Arrow Orbit <span class="badge">Coming soon</span></h3>
+      <p>Tap the arrows, clear the orbits and power up the energy core. Each arrow flies off only when its path is clear, so pick the right order across hundreds of levels with turning rings and moving targets.</p>
+      <ul class="tags"><li>Puzzle</li><li>Android</li><li>Plays offline</li></ul>
+    </div>
+    <div class="game-links">
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.UniStudio.ArrowOrbit"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 2.8v18.4c0 .8.9 1.3 1.6.9l15.2-9.2a1 1 0 0 0 0-1.8L6.6 1.9C5.9 1.5 5 2 5 2.8z"/></svg>Google Play</a>
+      <a class="small" href="arroworbit/privacy.html">Privacy policy</a>
+    </div>
+    <a class="trailer" href="https://youtu.be/q9qtXc3Kl08" aria-label="Watch the Arrow Orbit trailer on YouTube"><img src="assets/arroworbit/trailer.webp" width="1280" height="720" alt="Arrow Orbit gameplay: tap an arrow and it flies off the orbit" loading="lazy"><span class="play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13a1 1 0 0 0 1.5.9l10.4-6.5a1 1 0 0 0 0-1.8L9.5 4.6A1 1 0 0 0 8 5.5z"/></svg></span></a>
+  </article>
   <p class="soon">More games are on the way.</p>
 </div></section>
 
@@ -179,7 +199,7 @@ footer { padding: 40px 0 48px; display: flex; justify-content: space-between; ga
 
 <footer>
   <span>© 2026 Uni Studio</span>
-  <a href="kittenpop/privacy.html">Kitten Pop privacy policy</a>
+  <span><a href="kittenpop/privacy.html">Kitten Pop privacy policy</a> · <a href="arroworbit/privacy.html">Arrow Orbit privacy policy</a></span>
 </footer>
 </div>
 </body>

@@ -17,7 +17,7 @@ Plain static HTML/CSS, no build step, served by GitHub Pages from the `uni-studi
 
 ## Product Purpose
 
-Studio home for Uni Studio: list every game the studio ships (currently one, Kitten Pop), send visitors to the store, and host each game's legal pages. Success: a visitor knows what Uni Studio makes within seconds and taps through to Google Play.
+Studio home for Uni Studio: list every game the studio ships (Kitten Pop, Arrow Orbit), send visitors to the store, and host each game's legal pages. Success: a visitor knows what Uni Studio makes within seconds and taps through to Google Play.
 
 ## Positioning
 
@@ -31,6 +31,7 @@ Uni Studio makes cozy, candy-bright casual puzzle games for mobile. Its first ga
 ## Capabilities and Constraints
 
 - Games: Kitten Pop: Cat Match Puzzle, Android, Google Play id `com.UniStudio.KittenPop`, Puzzle / Casual, offline play, ads and in-app purchases.
+- Arrow Orbit, Android, Google Play id `com.UniStudio.ArrowOrbit`, Puzzle, in Play review as of 2026-11-14 (card shows "Coming soon" badge; drop it once live). Trailer https://youtu.be/q9qtXc3Kl08 shown as a local poster linking to YouTube, because the embed shows a personal channel name.
 - Kitten Pop facts usable on the site: hundreds of levels across candy lands; 15 collectible cat breeds (Calico, Ginger, Tuxedo, Siamese, Snow, Lilac, Golden, Gummy, Cupcake, Donut and more); outfits and hats; boosters Color Bomb, Lollipop, Undo; rainbow cats; daily gifts and spin wheel; chocolate and ice obstacles.
 - Kitten Pop's existing privacy policy lives at `marwan0.github.io/kittenpop/privacy.html` (linked from Play). Data-safety form cites `marwan0.github.io/kittenpop/delete.html`. Privacy and delete pages exist in both repos (Marwan0.github.io and this one); keep them in sync.
 - Adding a game must be a copy-one-block edit.
