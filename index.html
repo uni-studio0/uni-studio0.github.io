@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Uni Studio · Casual puzzle games for your phone</title>
 <meta name="description" content="Uni Studio is an independent studio making casual puzzle games for your phone: Kitten Pop and Arrow Orbit on Google Play.">
-<meta name="theme-color" content="#f4f2fa">
+<meta name="theme-color" content="#22093f">
 <meta property="og:title" content="Uni Studio · Casual puzzle games for your phone">
 <meta property="og:description" content="An independent studio making casual puzzle games for your phone. Meet Kitten Pop and Arrow Orbit.">
 <meta property="og:image" content="https://uni-studio0.github.io/assets/kittenpop/feature.jpg">
@@ -16,14 +16,14 @@
 @font-face { font-family: Fredoka; src: url(fonts/Fredoka.woff2) format("woff2"); font-weight: 300 700; font-display: swap; }
 @font-face { font-family: Nunito; src: url(fonts/Nunito.woff2) format("woff2"); font-weight: 200 1000; font-display: swap; }
 :root {
-  --bg: #f4f2fa; --bg-2: #fbfaff; --panel: #fff; --line: #d9d3ea; --soft: #eeebf7; --soft-hover: #e2ddf2;
-  --on-bg: var(--plum); --on-bg-2: var(--plum-2); --block: var(--plum);
+  --bg: #22093f; --bg-2: #2d1052; --panel: #fff; --line: #4a2a78; --soft: #eeebf7; --soft-hover: #e2ddf2;
+  --on-bg: #fff; --on-bg-2: #d9c9f2; --block: #3a1766; --road: #3a1766;
   --t-pink: #ff5aa8; --t-violet: #a463f2; --t-mint: #3fd9c2; --t-sun: #ffcc3d;
   --plum: #2b0d4f; --plum-2: #5b3a85;
   --pink: #e8338a; --pink-deep: #c2186f; --violet: #8d4be0; --mint: #22bfa6; --sun: #ffc22e;
   --shadow: 0 18px 40px -24px rgb(43 13 79 / .35);
   --ease: cubic-bezier(.16, 1, .3, 1);
-  color-scheme: light;
+  color-scheme: dark;
 }
 * { box-sizing: border-box; margin: 0; }
 html { scrollbar-color: var(--pink) var(--bg); scroll-behavior: smooth; }
@@ -41,8 +41,8 @@ header { display: flex; align-items: center; justify-content: space-between; gap
 .brand svg { width: 44px; height: auto; }
 .brand b { color: var(--pink); font-weight: 600; }
 nav { display: flex; gap: 8px; font-weight: 500; font-size: 18px; }
-nav a { text-decoration: none; padding: 10px 18px; border-radius: 999px; background: var(--panel); transition: background .2s, color .2s; }
-nav a:hover { background: var(--plum); color: #fff; }
+nav a { text-decoration: none; padding: 10px 18px; border-radius: 999px; background: var(--block); transition: background .2s, color .2s; }
+nav a:hover { background: var(--pink); color: #fff; }
 
 /* Buttons */
 .btn { display: inline-flex; align-items: center; gap: 12px; padding: 17px 30px; border-radius: 999px; font-weight: 600; font-size: 20px; line-height: 1; text-decoration: none;
@@ -67,7 +67,7 @@ h2 { font-weight: 600; font-size: clamp(34px, 3.6vw, 46px); line-height: 1.1; le
 .road { position: absolute; inset: 0; width: 100%; height: calc(100% + 140px); overflow: visible; pointer-events: none;
   -webkit-mask: linear-gradient(#000 calc(100% - 200px), transparent); mask: linear-gradient(#000 calc(100% - 200px), transparent); }
 .road path { fill: none; stroke-linecap: round; }
-.road .base { stroke: #fff; stroke-width: 30; }
+.road .base { stroke: var(--road); stroke-width: 30; }
 .road .dots { stroke-width: 12; stroke-dasharray: 0 104; }
 .road .d1 { stroke: var(--t-pink); } .road .d2 { stroke: var(--t-violet); stroke-dashoffset: -26; } .road .d3 { stroke: var(--t-mint); stroke-dashoffset: -52; } .road .d4 { stroke: var(--t-sun); stroke-dashoffset: -78; }
 .stop { position: relative; display: grid; grid-template-columns: 180px 1fr; align-items: center; gap: 40px; margin-bottom: 72px; }
