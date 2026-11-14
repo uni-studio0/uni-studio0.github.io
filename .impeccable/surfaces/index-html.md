@@ -5,14 +5,14 @@ primary_target: "index.html"
 related_targets: []
 ---
 
-Scope: studio home page `index.html` (Persuade). Audience: phone players arriving from Play/social; job: know what Uni Studio makes, tap to Google Play.
+Scope: studio home page `index.html` (Persuade). Audience: phone players arriving from Play/social; job: see every Uni Studio game at once and tap to Google Play.
 
 ## Direction contract
 
-THESIS: Category-standard casual studio site (user chose canon, mockup B), executed at Playrix/Supercell craft: the games' own screenshots carry the page, not studio chrome.
-OWN-WORLD: Candy-pink ground (#ffe6f2) and paler band (#fff4fa), deep plum ink (#2b0d4f), hot pink accent (#e8338a), logo tile colors (violet, mint, sun) as small signals. Fredoka display, Nunito body. Pill buttons and nav, 32px rounded white panels with soft plum shadows.
-STORY: Visitor reads "Cozy puzzle games, candy-bright", sees Kitten Pop screenshots, taps Google Play; scrolls to see the games list, about, contact.
-FIRST VIEWPORT: Pill nav top; centered three-line headline, lede, plum Play button; fan of five captioned phone screenshots rising from the fold.
-FORM: canon (category standard), mockup B. seed:149978cd33f72218
+THESIS: The studio home is a level map, the same world map players walk inside the games: each game is a numbered stop on a candy path, the next game a locked level. Refuses the single-game hero and the row-of-equal-cards template.
+OWN-WORLD: Studio-neutral cool off-white ground (#f4f2fa), white road with dots cycling the four logo tile colors (pink, violet, mint, sun), sun-ringed white level nodes holding app icons, hot-pink level chips, white 32px panels with soft plum shadows, plum pill Play buttons; pale dashed locked level with a drawn padlock. Game palettes stay inside game art. Fredoka display, Nunito body.
+STORY: Visitor reads "Small puzzles, big smiles", sees the path start at level 1 inside the first viewport, taps Google Play on a stop, scrolls the path to the locked next level, then about and contact.
+FIRST VIEWPORT: Pill nav; centered one-line headline with short lede; level 1 stop (Kitten Pop node, panel with pitch, Play button, two screenshots) visible, level 2 starting below, path winding between.
+FORM: surface structure 3 of my 7 (level map), dealt third. seed:bdcd317a2c74d38b
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
-Signature interaction: the screenshot fan spreads open once on load from a stacked deck; hovered card lifts and straightens.
+Signature interaction: the path draws itself from node to node once on load (reduced motion: drawn), and each node pops in as the track reaches it.
