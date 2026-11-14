@@ -14,12 +14,12 @@ Uni Studio site: a studio night world: the logo's deep plum as ground, its four 
 | `--soft` / `--soft-hover` | `#eeebf7` / `#e2ddf2` | secondary pill button on white |
 | `--plum` | `#2b0d4f` | ink inside white panels, primary button |
 | `--plum-2` | `#5b3a85` | secondary text |
-| `--pink` | `#e8338a` | accent: headline highlight, level chips, focus ring, link underline |
+| `--pink` | `#e8338a` | accent: level chips, focus ring, link underline |
 | `--sun` | `#ffc22e` | node rings, Coming soon badge, Play triangle |
-| `--t-pink --t-violet --t-mint --t-sun` | `#ff5aa8 #a463f2 #3fd9c2 #ffcc3d` | logo tiles; the road's dots cycle through all four |
+| `--t-pink --t-violet --t-mint --t-sun` | `#ff5aa8 #a463f2 #3fd9c2 #ffcc3d` | logo tiles; road dots cycle all four; `--t-pink` also sets the h1 highlight and "Uni" on the dark ground |
 | `--on-bg` / `--on-bg-2` | `#fff` / `#d9c9f2` | text set directly on the ground |
 | `--block` | `#3a1766` | nav pills, contact block (pink on nav hover) |
-| `--shadow` | `0 18px 40px -24px rgb(43 13 79 / .35)` | white panels |
+| `--shadow` | `0 18px 40px -24px rgb(0 0 0 / .5)` | white panels |
 | `--ease` | `cubic-bezier(.16,1,.3,1)` | all motion |
 
 Game palettes (Kitten Pop pink, Arrow Orbit space navy) appear only inside that game's own art: icon, screenshots. Never as page ground.
